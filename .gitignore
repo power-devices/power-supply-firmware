@@ -30,3 +30,10 @@
 *.exe
 *.out
 *.app
+
+# modm stuff
+SConstruct
+project.xml.log
+src/modm
+
+

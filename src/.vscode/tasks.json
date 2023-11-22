@@ -1,0 +1,49 @@
+{
+    // See https://code.visualstudio.com/docs/editor/tasks
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Build (Release)",
+            "command": "scons build profile=release -j$(nproc)",
+            "group": "build",
+            "presentation": {
+                "reveal": "silent",
+                "showReuseMessage": false
+            },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "type": "shell",
+            "label": "Build (Debug)",
+            "command": "scons build profile=debug -j$(nproc)",
+            "group": "build",
+            "presentation": {
+                "reveal": "silent",
+                "showReuseMessage": false
+            },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "type": "shell",
+            "label": "Upload (Release)",
+            "command": "scons program profile=release -j$(nproc)",
+            "group": "build",
+            "presentation": {
+                "reveal": "silent",
+                "showReuseMessage": false
+            }
+        },
+        {
+            "type": "shell",
+            "label": "Upload (Debug)",
+            "command": "scons program profile=debug -j$(nproc)",
+            "group": "build",
+            "presentation": {
+                "reveal": "silent",
+                "showReuseMessage": false
+            }
+        },
+    ]
+}

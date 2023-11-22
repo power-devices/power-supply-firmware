@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug (Release, Scons, STM32F103C8T6)",
+            "cwd": "${workspaceFolder}",
+            "executable": "build/scons-release/src.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "device": "STM32F103C8T6",
+            "rtos": "FreeRTOS",
+            "configFiles": [
+                "openocd.cfg",
+		"modm/openocd.cfg",
+            ],
+        },
+        {
+            "name": "Debug (Debug, Scons, STM32F103C8T6)",
+            "cwd": "${workspaceFolder}",
+            "executable": "build/scons-debug/src.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "device": "STM32F103C8T6",
+            "rtos": "FreeRTOS",
+            "configFiles": [
+	        "openocd.cfg",
+                "modm/openocd.cfg",
+            ],
+        },
+    ]
+}
